@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ##Exercícios
 
 1 - Conforme solicitado, foi baixado o arquivo *dados_de_vendas.sh* e criado um **diretório** chamado *ecommerce* e inserido o arquivo dados_de_vendas.sh nele.
@@ -15,6 +16,8 @@
 # Evidências
  
 1- Criação do arquivo executável *processamento_de_vendas.sh* com permissão para torná-lo executável.
+=======
+>>>>>>> 87503d2d319a777e20c88000624d1ab5785e9fa4
 
 1- Criação do *crontab* para executar os 4 agendamentos do arquivo *processamento_de_vendas.sh*
 
