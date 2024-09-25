@@ -1,44 +1,59 @@
 import csv
+import os  # Importar para verificar a existência de arquivos
 
-def contar_receita_por_ator(arquivo):
-    """Conta a receita total de cada ator em um arquivo CSV e retorna uma lista de tuplas ordenadas.
+def contar_filmes_mais_populares(arquivo):
+    """Conta a frequência de cada filme em um arquivo CSV e retorna uma lista de tuplas ordenadas.
 
     Args:
         arquivo: O nome do arquivo CSV.
 
     Returns:
-        Uma lista de tuplas onde as chaves são os nomes dos atores e os valores são as receitas totais.
+        Uma lista de tuplas onde as chaves são os nomes dos filmes e os valores são as contagens.
     """
     
-    receita_por_ator = {}
+    filmes = {}
     with open(arquivo, 'r', encoding='utf-8') as csvfile:
         reader = csv.DictReader(csvfile)  # Usa DictReader para facilitar o acesso por nome da coluna
         for row in reader:
-            ator = row['Actor'] 
-            receita = row['Total Gross'] 
-            
-            # Converte a receita para float, substituindo possíveis vírgulas
-            if receita:
-                receita = float(receita.replace(',', '').replace('$', '').strip())  # Remove símbolos e espaços
-                if ator in receita_por_ator:
-                    receita_por_ator[ator] += receita
+            filme = row['#1 Movie']  # Acessa a coluna #1 Movie
+            if filme:  # Verifica se o filme não é vazio
+                if filme in filmes:
+                    filmes[filme] += 1
                 else:
-                    receita_por_ator[ator] = receita
+                    filmes[filme] = 1
 
-    # Ordena os atores pela receita total em ordem decrescente
-    atores_ordenados = sorted(receita_por_ator.items(), key=lambda x: x[1], reverse=True)
-    return atores_ordenados
+    filmes_ordenados = sorted(filmes.items(), key=lambda x: x[1], reverse=True)
+    return filmes_ordenados
+
+# Função para salvar resultados em um arquivo .txt
+def salvar_resultados_em_txt(resultado, nome_arquivo):
+    """Salva os resultados em um arquivo .txt.
+
+    Args:
+        resultado: A lista de tuplas com os resultados.
+        nome_arquivo: O nome do arquivo para salvar os resultados.
+    """
+    try:
+        with open(nome_arquivo, 'w', encoding='utf-8') as file:
+            for filme, contagem in resultado:
+                file.write(f"O filme '{filme}' aparece {contagem} vez(es) no dataset.\n")
+        print(f"Os resultados foram salvos em '{nome_arquivo}'.")
+    except Exception as e:
+        print(f"Ocorreu um erro ao salvar o arquivo: {e}")
 
 # Exemplo de uso
-arquivo_csv = 'actors.csv'
-resultado = contar_receita_por_ator(arquivo_csv)
+arquivo_csv = 'actors.csv'  # Certifique-se de que este arquivo CSV está no mesmo diretório ou forneça o caminho completo
 
-# Imprimindo os resultados com o nome do ator e a receita total
-for ator, receita in resultado:
-    print(f"{ator} - ${receita:,.2f}")  # Formatação da receita para incluir vírgulas
+# Verifique se o arquivo CSV existe
+if not os.path.exists(arquivo_csv):
+    print(f"O arquivo '{arquivo_csv}' não foi encontrado. Verifique o caminho e tente novamente.")
+else:
+    resultado = contar_filmes_mais_populares(arquivo_csv)
 
-# Escrevendo os resultados em um arquivo
-output_file_path = 'actors.csv'
-with open(output_file_path, 'w', encoding='utf-8') as file:
-    for ator, receita in resultado:
-        file.write(f"{ator} - ${receita:,.2f}\n")  # Formatação da receita para incluir vírgulas
+    # Imprimindo os resultados com o nome do filme no console
+    for filme, contagem in resultado:
+        print(f"O filme '{filme}' aparece {contagem} vez(es) no dataset.")
+
+    # Escrevendo os resultados em um arquivo .txt
+    output_file_path = 'resultado_filmes_populares.txt'
+    salvar_resultados_em_txt(resultado, output_file_path)

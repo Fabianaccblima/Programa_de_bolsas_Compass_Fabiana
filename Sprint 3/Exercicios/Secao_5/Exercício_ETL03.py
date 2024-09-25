@@ -25,12 +25,26 @@ def ator_com_maior_media(caminho_csv):
         else:
             return None, None
 
+# Função para salvar o resultado em um arquivo .txt
+def salvar_resultado_em_txt(ator, media, nome_arquivo):
+    with open(nome_arquivo, 'w') as txtfile:
+        if ator:
+            txtfile.write(f'O ator/atriz com a maior média de receita bruta por filme é: {ator} com {media:.2f}\n')
+        else:
+            txtfile.write('Não foi possível encontrar o ator/atriz com a maior média. Verifique os dados no arquivo CSV.\n')
+
 # Caminho do arquivo CSV
 caminho_csv = 'actors.csv'
 
 # Calcula e exibe o ator/atriz com a maior média
 ator, media = ator_com_maior_media(caminho_csv)
 if ator:
-    print(f'O ator/atriz com a maior média de receita bruta por filme é: {ator} com {media:.2f}')
+    resultado = f'O ator/atriz com a maior média de receita bruta por filme é: {ator} com {media:.2f}'
 else:
-    print('Não foi possível encontrar o ator/atriz com a maior média. Verifique os dados no arquivo CSV.')
+    resultado = 'Não foi possível encontrar o ator/atriz com a maior média. Verifique os dados no arquivo CSV.'
+
+# Exibe o resultado no console
+print(resultado)
+
+# Salva o resultado em um arquivo .txt
+salvar_resultado_em_txt(ator, media, 'resultado_maior_media_ator.txt')

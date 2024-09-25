@@ -24,14 +24,25 @@ def calcular_media_gross(caminho_csv):
         else:
             return None
 
+# Função para salvar o resultado em um arquivo .txt
+def salvar_resultado_em_txt(media, nome_arquivo):
+    with open(nome_arquivo, 'w') as txtfile:
+        if media is not None:
+            txtfile.write(f'A média da receita bruta (Gross) é: {media:.2f}\n')
+        else:
+            txtfile.write('Não foi possível calcular a média. Verifique os dados no arquivo CSV.\n')
+
 # Caminho do arquivo CSV
 caminho_csv = 'actors.csv'
 
-# Calcula e exibe a média
+# Calcula a média
 media = calcular_media_gross(caminho_csv)
+
+# Exibe o resultado no console
 if media is not None:
     print(f'A média da receita bruta (Gross) é: {media:.2f}')
 else:
     print('Não foi possível calcular a média. Verifique os dados no arquivo CSV.')
 
-
+# Salva o resultado em um arquivo .txt
+salvar_resultado_em_txt(media, 'resultado_media_gross.txt')
