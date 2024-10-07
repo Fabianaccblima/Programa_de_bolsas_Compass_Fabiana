@@ -16,3 +16,4 @@
 
 5.2 - Desenvolver e executar um script em Python dentro de um container. Foi necessário criar um contêiner e uma imagem Docker para rodar um script Python, além de precisar responder uma pergunta a respeito do Docker. 
 
+#### Nesta Sprint, realizei todos os cursos recomendados, incluindo o curso de Estatítisca descritiva do Python, também finalizei o curso de Métodos Ágeis e o de Segurança da Informação. 
