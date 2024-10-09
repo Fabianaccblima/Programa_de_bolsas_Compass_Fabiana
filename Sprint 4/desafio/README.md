@@ -16,6 +16,11 @@
 
 `cmd ["python", "carguru.py"]`
 
+![alt text](<C:\Users\fabia\OneDrive\Área de Trabalho\PB-FABIANA-LIMA\Sprint 4\evidencias\Etapa_1>)
+
+
+
+
 3.1 - O comando `from` para indicar que a imagem base para a construção do Docker é uma imagem do Python.
 
 3.2 - O comando `workdir` para definir o diretório de trabalho dentro da imagem Docker.
