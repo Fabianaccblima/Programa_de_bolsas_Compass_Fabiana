@@ -16,6 +16,8 @@
 
 `cmd ["python", "carguru.py"]`
 
+![dockfile](../evidencias/Etapa_1/dockfile.png)
+
 3.1 - O comando `from` para indicar que a imagem base para a construção do Docker é uma imagem do Python.
 
 3.2 - O comando `workdir` para definir o diretório de trabalho dentro da imagem Docker.
@@ -26,13 +28,19 @@
 
 4 - Em seguida, ultilizei o comando `docker build -t carguru` para criar a imagem Docker com o nome "carguru"
 
+![criacao_imagem](../evidencias/Etapa_1/criacao_imagem_etapa01.png)
+
 5 - E por fim, utilizei o comando `docker run carguru`para executar o coitêiner. 
+
+![alt text](../evidencias/Etapa_1/execucao_etapa01.png)
 
 ### Etapa 2: 
 
 Sim, é possível reutilizar coitêiners. O comando `docker start <nome_ou_id_do_conteiner>` reeutiliza um coitêiner que está parado.
 
 No desafio, ao executar o comando `docker run carguru`, o sistema informava de forma aleatória qual carro você deveria dirigir e, em seguida, encerrava o programa. Para reutilizar o contêiner sem precisar criar um novo, utilizei o comando `docker start`, o que reiniciou o contêiner e gerou uma nova saída. Para verificar as saídas anteriores e confirmar a reutilização do contêiner, utilizei o comando `docker logs`, que exibe o histórico de saídas dos contêineres.
+
+![docker_start](../evidencias/Etapa_2/etapa_2.png)
 
 ### Etapa 3:
 
@@ -50,9 +58,16 @@ No desafio, ao executar o comando `docker run carguru`, o sistema informava de f
 
 `cmd ["python", "print_hash.py"]`
 
+![alt text](../evidencias/Etapa_3/dockerfile_.png)
+
+
 4 - Em seguida, ultilizei o comando `docker build -t mascarar-dados` para criar a imagem Docker com o nome "mascarar-dados"
 
+![alt text](../evidencias/Etapa_3/criacao_imagem_etapa03.png)
+
 5 - E por fim, utilizei o comando `docker run -it mascarar-dados` para executar o coitêiner. 
+
+![alt text](../evidencias/execucao_etapa03.png)
 
 
 
