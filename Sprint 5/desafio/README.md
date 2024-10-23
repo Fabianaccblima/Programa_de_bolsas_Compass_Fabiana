@@ -6,6 +6,10 @@
 
 ![alt text](../evidencias/Desafio/Chegadas_tb_2023.png)
 
+ Essa tabela contém os dados dos números de chegadas de turistas estrangeiros por continente e País de origem, indica também
+os Estados brasileiros de destino desses turistas. Também informa, qual a via de chegada dos turistas (ex: via aérea, marítima, fluvial..)
+no ano de 2023. 
+
 ### Etapa 2: 
 
 ## Upload no S3
@@ -165,3 +169,43 @@ Exibi uma mensagem de sucesso confirmando que o arquivo foi gerado e enviado par
 `print(f'O arquivo {output_file} foi gerado e enviado para o bucket {bucket_name} com sucesso.')`
 
 ![alt text](../evidencias/Desafio/resultado_chegadas.png)
+
+
+## Explicação da tabela: 
+
+A consulta realizada na tabela original tem como objetivo obter os dados agregados das chegadas de turistas em diferentes países europeus durante o mês de julho, exceto na Turquia. 
+
+Os dados são filtrados para incluir apenas países com mais de 50 chegadas no total.
+
+| País               | Total de Chegadas | Média de Chegadas |
+|--------------------|-------------------|-------------------|
+| ALEMANHA           | 3574              | 119.13            |
+| BÉLGICA            | 1191              | 45.81             |
+| DINAMARCA          | 484               | 25.47             |
+| ESLOVÁQUIA         | 51                | 3.64              |
+| ESPANHA            | 2805              | 96.72             |
+| FINLÂNDIA          | 68                | 4.53              |
+| FRANÇA             | 12916             | 416.65            |
+| GRÉCIA             | 156               | 7.09              |
+| HOLANDA            | 2278              | 87.62             |
+| HUNGRIA            | 108               | 7.71              |
+| IRLANDA            | 456               | 19.83             |
+| ITÁLIA             | 2746              | 101.70            |
+| NORUEGA            | 656               | 36.44             |
+| POLÔNIA            | 341               | 13.64             |
+| PORTUGAL           | 6624              | 264.96            |
+| REINO UNIDO        | 3141              | 116.33            |
+| REPÚBLICA TCHECA   | 89                | 5.24              |
+| ROMÊNIA            | 95                | 4.13              |
+| RÚSSIA             | 409               | 17.78             |
+| SUÉCIA             | 452               | 22.60             |
+| SUÍÇA              | 2741              | 101.52            |
+| UCRÂNIA            | 82                | 4.32              |
+| ÁUSTRIA            | 491               | 24.55             |
+
+### Análise de dados:
+
+- **Total de Chegadas:** Esta coluna representa o número total de chegadas de turistas em cada país durante o mês de julho.
+- **Média de Chegadas:** Representa a média diária de chegadas ao longo do período considerado.
+
+Os países com maior número de chegadas são a **França** e **Portugal**, sugerindo que esses destinos foram mais populares no Brasil. Em contraste, a **Eslováquia** e a **Romênia** apresentam os menores totais, indicando um fluxo turístico mais baixo.
