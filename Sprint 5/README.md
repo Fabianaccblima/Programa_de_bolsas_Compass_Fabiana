@@ -7,6 +7,8 @@ Jogar um jogo interativo que ensina conceitos fundamentais de computação em nu
 
 [Certificados](./certificados)
 
+https://www.credly.com/badges/7dd34860-d2e8-4e51-9b6e-a4489dd47795/public_url
+
 ## 2 - Curso Padrão de Preparação para o Exame: AWS Certified Cloud 
 Curso Padrão de Preparação para o Exame: AWS Certified Cloud Practitioner
 O objetivo é preparar para o exame AWS Certified Cloud Practitioner, abordando conceitos de computação em nuvem, principais serviços da AWS, segurança, melhores práticas e estruturas de preços.
