@@ -1,10 +1,10 @@
 
-### Depois de baixar e analisar as duas tabelas .csv  (movies e series) optei por escolher a 
-### tabela movies para desenvolver o meu projeto.
+#### Depois de baixar e analisar as duas tabelas .csv  (movies e series) optei por escolher a 
+#### tabela movies para desenvolver o meu projeto.
 
-## Análise de Filmes de Comédia Romântica (1984-2022)
+### Análise de Filmes de Comédia Romântica (1984-2022)
 
-### Este análise visa analisar a evolução dos filmes de comédia romântica entre 1984 e 2022, focando em quatro áreas principais:
+#### Este análise visa analisar a evolução dos filmes de comédia romântica entre 1984 e 2022, focando em quatro áreas principais:
 
 1. Nota Média por Década: 
 
@@ -102,7 +102,7 @@ dia = data_atual.strftime('%d')  # Dia
 
 Este código tem como objetivo criar um bucket no Amazon S3 (se ainda não existir) e fazer o upload de arquivos CSV de um diretório local para um caminho estruturado no S3, baseado na data atual. Ele cria o bucket, itera sobre os arquivos, define um caminho dinâmico para cada arquivo (incluindo ano, mês e dia) e os envia para o S3. Após o upload, imprime uma mensagem de sucesso para cada arquivo. Caso ocorra um erro, ele é capturado e a mensagem de erro é exibida.
 
-![alt text](datatime.png)
+![alt text](../evidencias/datatime.png)
 
 
 ```
@@ -167,7 +167,7 @@ except Exception as e:
 
 4.9 - E por fim, utilizei o comando `docker run s3_imagem` para executar o coitêiner.
 
-![alt text](image.png)
+![alt text](../evidencias/criar_container.png)
 
 ### 5 - Volume:
 
