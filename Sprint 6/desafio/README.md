@@ -1,4 +1,6 @@
-###  Análise:
+
+### Depois de baixar e analisar as duas tabelas .csv  (movies e series) optei por escolher a 
+### tabela movies para desenvolver o meu projeto.
 
 ## Análise de Filmes de Comédia Romântica (1984-2022)
 
