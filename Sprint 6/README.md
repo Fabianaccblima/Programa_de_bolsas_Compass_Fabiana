@@ -39,7 +39,7 @@ Explicou as melhores práticas para criar, gerenciar e otimizar data warehouses 
 
 Explicou como utilizar o Amazon QuickSight para criar visualizações interativas e painéis de controle a partir de dados armazenados na AWS, facilitando a análise e a tomada de decisões.
 
-[Certificados](./certificados)
+[Certificados](./Certificados)
 
 
 ## Exercícios
@@ -56,7 +56,7 @@ O exercício  ensina a configurar o Athena para realizar consultas em dados no S
 
 No exercício "Lab AWS Lambda", criei uma função Lambda no console da AWS, selecionando o runtime Python 3.9 e escrevendo um código para acessar um arquivo CSV armazenado no S3, usando as bibliotecas Pandas e Boto3 para contar o número de linhas no arquivo. Ao testar a função, encontrei um erro devido à falta da biblioteca Pandas, o que me levou a criar uma "Layer" no Lambda. Para isso, utilizei o Docker para instalar o Pandas e suas dependências, criei um arquivo ZIP com as bibliotecas e o carreguei no S3. Em seguida, criei a camada no Lambda, vinculando-a à minha função. Após isso, testei a função novamente e obtive com sucesso a contagem das linhas do arquivo CSV, indicando que a configuração foi bem-sucedida.
 
-[Exercícios](./exercicios)
+[Exercícios](./Exercicios)
 
 ## Desafio
 
