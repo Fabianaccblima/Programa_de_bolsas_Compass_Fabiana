@@ -1,5 +1,5 @@
 import boto3
-from datetime import datetime  # Importando corretamente a biblioteca datetime
+from datetime import datetime  
 
 # Credenciais AWS 
 aws_access_key_id = 'ASIASFIXCUHPPBD7IL4G'
@@ -16,7 +16,7 @@ s3 = boto3.client(
 )
 
 # Nome do bucket e arquivos
-bucket = 'data-lake-de-fabiana'  # Substitua pelo nome do seu bucket
+bucket = 'data-lake-de-fabiana'  
 
 # Lista de arquivos a serem enviados e suas especificações
 arquivos = [
