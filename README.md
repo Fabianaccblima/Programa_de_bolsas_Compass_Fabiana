@@ -1,10 +1,9 @@
-## Fabiana Lima 
 
 ![Minha Foto](https://github.com/Fabianaccblima/Fabianaccblima/blob/main/perfil.jpeg)
 
 # Olá, sou Fabiana! 👋
 
-Sou de **Recife** e formada em **Fisioterapia**, mas atualmente estou em transição de carreira para a área de **Tecnologia**. No momento, estou cursando o **2º período do curso de Segurança da Informação** pela **Faculdade Senac de São Paulo**. Além disso, estou estagiando no programa de bolsas da **Compass UOL** na área de **Engenharia de Dados**, onde estou me aprofundando em conhecimentos práticos para o mercado de trabalho.
+Sou de **Recife** e formada em **Fisioterapia**, mas atualmente estou em transição de carreira para a área de **Tecnologia**. No momento, estou cursando o **3º período do curso de Segurança da Informação** pela **Faculdade Senac de São Paulo**. Além disso, estou estagiando no programa de bolsas da **Compass UOL** na área de **Engenharia de Dados**, onde estou me aprofundando em conhecimentos práticos para o mercado de trabalho.
 
 Estou sempre em busca de **novos desafios** e **oportunidades** para aprender e crescer nessa nova jornada. 🚀
 
