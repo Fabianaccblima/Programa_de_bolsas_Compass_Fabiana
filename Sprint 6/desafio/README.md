@@ -167,4 +167,29 @@ except Exception as e:
 
 ![alt text](../evidencias/bucket_series_csv.png)
 
+### 5 - Análise:
+
+
+## Análise de Filmes de Comédia Romântica (1984-2022)
+
+### Este análise visa analisar a evolução dos filmes de comédia romântica entre 1984 e 2022, focando em quatro áreas principais:
+
+1. Nota Média por Década: 
+
+Avaliação das mudanças nas notas médias ao longo das décadas.
+
+2. Impacto do Tempo de Filme: 
+
+Análise da relação entre a duração dos filmes e suas notas médias.
+
+3. Idade dos Artistas: 
+
+Estudo de como a idade média dos artistas afeta a avaliação dos filmes.
+
+4. Produção por Década: 
+
+Quantificação dos filmes lançados por década para observar tendências de popularidade.
+
+#### O objetivo é fornecer uma visão geral sobre como a qualidade e popularidade das comédias românticas evoluíram, considerando fatores como a duração dos filmes e a faixa etária dos artistas
+
 
