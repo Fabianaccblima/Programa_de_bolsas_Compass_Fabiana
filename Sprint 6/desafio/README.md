@@ -102,7 +102,8 @@ dia = data_atual.strftime('%d')  # Dia
 
 Este código tem como objetivo criar um bucket no Amazon S3 (se ainda não existir) e fazer o upload de arquivos CSV de um diretório local para um caminho estruturado no S3, baseado na data atual. Ele cria o bucket, itera sobre os arquivos, define um caminho dinâmico para cada arquivo (incluindo ano, mês e dia) e os envia para o S3. Após o upload, imprime uma mensagem de sucesso para cada arquivo. Caso ocorra um erro, ele é capturado e a mensagem de erro é exibida.
 
-![alt text](../evidencias/datatime.png)
+![DataTime](../evidencias/datatime.png)
+
 
 
 ```
@@ -123,7 +124,7 @@ except Exception as e:
     print(f'Ocorreu um erro: {e}')
 ```    
 
-![alt text](<../evidencias/bucket .py.png>)
+![criar bucket.py](<../evidencias/bucket .py.png>)
 
 ### 4 - Dockerfile:
 
@@ -163,35 +164,35 @@ except Exception as e:
 
 4.8 - 4 - Em seguida, ultilizei o comando `docker build -t s3_imagem` para criar a imagem Docker com o nome "s3_imagem".
 
-![alt text](../evidencias/Dockerfile_criacao_imagem.png)
+![criar imagem](../evidencias/Dockerfile_criacao_imagem.png)
 
 4.9 - E por fim, utilizei o comando `docker run s3_imagem` para executar o coitêiner.
 
-![alt text](../evidencias/criar_container.png)
+![criar container](../evidencias/criar_container.png)
 
 ### 5 - Volume:
 
 5.1 - Utilizei o comando `docker volume create meu_volume` para criar um volume no Docker chamado meu_volume.
 
-![alt text](../evidencias/criar_volume.png)
+![criar volume](../evidencias/criar_volume.png)
 
 5.2 - Em seguida, utilizei o comando `docker run -v meu_volume:/app s3_imagem` para executar um contêiner da imagem "s3_imagem" e montar o volume "meu_volume" no diretório /app dentro do contêiner.
 
-![alt text](../evidencias/executar_volume.png)
+![executar volume](../evidencias/executar_volume.png)
 
-![alt text](../evidencias/itens_volume.png)
+![itens volume](../evidencias/itens_volume.png)
 
 ### 6 - AWS:
 
 1. Após concluir o processo, acessei minha conta na AWS para verificar se o código foi executado com sucesso e se tudo estava conforme o esperado.
 
-![alt text](../evidencias/bucket-data-lake.png)
+![bucket aws](../evidencias/bucket-data-lake.png)
 
-![alt text](../evidencias/bucket_pastas_csv.png)
+![pasta aws](../evidencias/bucket_pastas_csv.png)
 
-![alt text](../evidencias/bucket_filmes_csv.png)
+![filmes.csv](../evidencias/bucket_filmes_csv.png)
 
-![alt text](../evidencias/bucket_series_csv.png)
+![series.csv](../evidencias/bucket_series_csv.png)
 
 
 
