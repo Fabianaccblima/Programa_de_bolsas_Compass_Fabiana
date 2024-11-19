@@ -59,7 +59,7 @@ Atualmente, estou aplicando meus conhecimentos em:
 
 ## 🌱 Estou em busca de:
 
-- **Mentoria** na área de **Segurança da Informação** e **Engenharia de Dados**.
+- **Mentoria** na área de **Segurança da Informação** e **Análise de Dados**.
 - **Oportunidades de estágio** ou **colaboração** em projetos relacionados a **Tecnologia** e **Dados**.
 
 ---
