@@ -73,7 +73,7 @@ A estrutura final ficou como: /root/layer_dir/python.
 
 5- Após obter o ID do container, usei o seguinte comando para copiar o arquivo minha-camada-layer.zip
 
-`docker cp <id do container>:/root/layer_dir/minha-camada-layer.zip ./ `
+`docker cp 50dd8a48256:/root/layer_dir/minha-camada-layer.zip ./ `
 
 6 - Como o arquivo era grande, fiz o upload dele para um bucket S3. Em seguida, no AWS Lambda, fui até a seção Camadas, cliquei em Criar uma camada, dei o nome de "camadazip" e escolhi a opção de fazer upload do arquivo via S3. Copiei a URL do arquivo no S3, colei no campo correspondente e selecionei as opções de arquitetura e runtime. Por fim, cliquei em Criar para finalizar a criação da camada.
 
