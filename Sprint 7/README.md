@@ -24,3 +24,7 @@ Criei uma conta no TMDb e obtive minha chave de API para acessar os dados relaci
 O objetivo do desafio foi criar uma função Lambda no AWS para processar filmes de comédia, com base na minha análise, buscando informações na API do TMDb. Inicialmente, criei a função no Lambda. Para incluir as dependências, criei um Dockerfile, construí uma imagem Docker e instalei as bibliotecas necessárias (requests e boto3). Após compactar e fazer o upload da camada para o S3, associei-a à função Lambda. Em seguida, criei uma política de permissões no IAM para garantir o acesso ao S3. No Lambda, desenvolvi o código, criando funções para buscar os filmes, obter os dados da análise e salvar os resultados em arquivos JSON. Os dados processados foram enviados para o S3, e o resultado final foi verificado no meu data lake no S3, onde os arquivos foram armazenados com sucesso.
 
 [Desafio](./desafio)
+
+## Análise 
+
+Análise dos filmes de comédia romântica (1984-2022) investiga a relação entre nota média, popularidade e duração, além de tendências na produção e recepção crítica por década. Foca em como a duração influencia o desempenho, se filmes populares têm melhores notas, e padrões de sucesso do gênero ao longo do tempo
