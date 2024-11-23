@@ -23,6 +23,10 @@ Quantidade de filmes de comédia romântica lançados em cada década e análise
 #### Objetivo Final:
 Identificar padrões e fatores que influenciam o sucesso de filmes de comédia romântica, considerando tanto a recepção crítica quanto a popularidade dos filmes ao longo do tempo. A análise vai explorar se a duração dos filmes tem um papel significativo em seu desempenho em termos de crítica e popularidade, além de examinar as mudanças nas tendências de produção e recepção do gênero por década.
 
+## TMDB
+
+1 - Entrei no site do TMDB e fiz o meu cadastro para obter a minha chave da API.
+
 
 ## Criar função Lambda 
 
