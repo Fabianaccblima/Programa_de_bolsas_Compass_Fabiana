@@ -27,4 +27,4 @@ O objetivo do desafio foi criar uma função Lambda no AWS para processar filmes
 
 ## Análise 
 
-Análise dos filmes de comédia romântica (1984-2022) investiga a relação entre nota média, popularidade e duração, além de tendências na produção e recepção crítica por década. Foca em como a duração influencia o desempenho, se filmes populares têm melhores notas, e padrões de sucesso do gênero ao longo do tempo
+Análise dos filmes de comédia romântica (1984-2022) investiga a relação entre nota média, popularidade e duração, além de tendências na produção e recepção crítica por década. Foca em como a duração influencia o desempenho, se filmes populares têm melhores notas, e padrões de sucesso do gênero ao longo do tempo.
