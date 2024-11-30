@@ -339,3 +339,22 @@ Os arquivos Json, após serem processados e convertidos para o formato Parquet, 
 
 ## Crawler
 
+Criei um crawler chamado `json_crawler` para explorar o caminho s3://data-lake-de-fabiana/trusted/tmdb/ na camada trusted do S3. Configurei o crawler para usar a IAM role `sprint8` e criei a base de dados `desafiosprint8` no Glue Data Catalog e o executei.
+
+![alt text](../evidencias/preview_json_crawler.png)
+
+![alt text](../evidencias/json_crawler.png)
+
+## Tabela
+
+A tabela tmdb foi criada
+
+![alt text](../evidencias/tab_tmdb.png)
+
+## AWS Athena
+
+![alt text](../evidencias/colunas_tmdb.png)
+
+![alt text](../evidencias/tb_tmdb.png)
+
+![alt text](../evidencias/tb_tmdb1.png)
