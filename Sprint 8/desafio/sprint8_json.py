@@ -39,7 +39,7 @@ dataframe = dataframe.withColumn("data_criacao", current_date())
 # Explodir a lista de filmes em várias linhas
 dataframe_exploded = dataframe.withColumn("filme", explode(col("filmes_comedia_romance")))
 
-# Seleciona e cria colunas individuais da estrutura interna de 'filme'
+# Seleciona e cria colunas individuais da estrutura interna de filme
 dataframe_normalized = dataframe_exploded.select(
     col("filme.nome").alias("nome"),
     col("filme.ano").alias("ano"),
