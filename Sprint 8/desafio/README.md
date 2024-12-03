@@ -249,7 +249,7 @@ target_path = args['S3_TARGET_PATH']
 ```
 O código inicializa o SparkContext e o GlueContext para gerenciar o job no AWS Glue, configurando a sessão Spark e o job com o nome definido em JOB_NAME. Os caminhos de entrada e saída fornecidos em S3_INPUT_PATH e S3_TARGET_PATH são atribuídos às variáveis source_file e target_path para processamento.
 
-### 4 - Ler o arquivo CSV como DynamicFrame e converte para Dataframe
+### 4 - Ler o arquivo Json como DynamicFrame e converte para Dataframe
 
 ```
 df = glueContext.create_dynamic_frame.from_options(
