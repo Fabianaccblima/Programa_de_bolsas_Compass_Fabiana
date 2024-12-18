@@ -181,3 +181,96 @@ dim_genero = dim_genero.withColumn(
 
 ```
 Adicionei um identificador único para cada linha na tabela  `dim_genero `.
+
+### Criando a tabela de dimensão de tempo, convertendo 'ano' e 'decada' para inteiro.
+
+```
+dim_tempo = top_filmes.select(
+    F.col('anoLancamento').alias('ano')
+).dropDuplicates().withColumn(
+    'decada',
+    (F.floor(F.col('ano').cast('int') / 10) * 10)
+).withColumn("dim_tempo_id", F.monotonically_increasing_id()) \
+   .withColumn('ano', F.col('ano').cast('int')) \
+   .withColumn('decada', F.col('decada').cast('int'))
+
+```
+Separei a coluna 'anoLancamento' em anos distintos, criei uma nova coluna para calcular a década de cada ano e eliminei as duplicatas. Além disso, adicionei um identificador único para cada linha e converti as colunas 'ano' e 'decada' para o tipo inteiro.
+
+### Criando a tabela de fato de filmes e adicionando o campo id_fato.
+
+```
+fato_filmes = top_filmes.join(dim_tempo, "decada").join(
+    dim_filmes,
+    (top_filmes['titulopincipal'] == dim_filmes['titulo']),
+    "inner"
+).join(
+    dim_genero,
+    (top_filmes['csv_genero'] == dim_genero['genero']),
+    "inner"
+).select(
+    dim_tempo["dim_tempo_id"],
+    dim_filmes["dim_filme_id"],
+    dim_genero["dim_genero_id"],  
+    F.col('tmdb_popularidade').alias('popularidade').cast('float'),
+    F.col('notaMedia').alias('notaMedia').cast('float')
+)
+
+fato_filmes = fato_filmes.withColumn("id_fato", F.monotonically_increasing_id())
+
+```
+Separei a tabela de filmes com base em três dimensões: tempo, filmes e gênero. Realizei uma junção entre as tabelas top_filmes, dim_tempo, dim_filmes e dim_genero usando as colunas correspondentes para combinar as informações. Selecionei as colunas necessárias, renomeei algumas delas, converti para o tipo adequado e, por fim, adicionei uma coluna de identificador único chamada "id_fato".
+
+### Obtendo a data atual no formato ano/mes/dia.
+
+```
+current_date = datetime.datetime.now().strftime("%Y/%m/%d")
+
+```
+Obtive a data atual no formato "ano/mês/dia.
+
+### Definindo os caminhos de saída com base na data atual e salvando as tabelas fato e dimensões em PARQUET.
+
+```
+output_dim_filmes_path = f"s3://data-lake-de-fabiana/refined/dim_filmes/{current_date}/"
+output_dim_tempo_path = f"s3://data-lake-de-fabiana/refined/dim_tempo/{current_date}/"
+output_fato_filmes_path = f"s3://data-lake-de-fabiana/refined/fato_filmes/{current_date}/"
+output_dim_genero_path = f"s3://data-lake-de-fabiana/refined/dim_genero/{current_date}/"  # Caminho para dim_genero
+
+dim_filmes.write.mode("overwrite").parquet(output_dim_filmes_path)
+dim_tempo.write.mode("overwrite").parquet(output_dim_tempo_path)
+fato_filmes.write.mode("overwrite").parquet(output_fato_filmes_path)
+dim_genero.write.mode("overwrite").parquet(output_dim_genero_path)  # Salvando a tabela dim_genero
+
+print(f"Tabelas de dimensões e fato salvas com sucesso em {current_date}.")
+
+```
+Salvei as tabelas dim_filmes, dim_tempo, fato_filmes e dim_genero no formato Parquet em caminhos específicos no Amazon S3, utilizando a data atual no nome da pasta (Refined). Além disso, configurei a sobrescrição dos dados existentes e imprimi uma mensagem de sucesso.
+
+![alt text](../Evidencias/job_sucesso.png)
+
+![alt text](../Evidencias/tabelas.png)
+
+![alt text](../Evidencias/path.png)
+
+![alt text](../Evidencias/parquet.png)
+
+### Crawler
+
+Criei um crawler chamado `modelo_dimensional` para explorar o caminho s3://data-lake-de-fabiana/refined/ na camada refined do S3. Configurei o crawler para usar a IAM role `desafio` e criei a base de dados `desafiosprint9` no Glue Data Catalog e o executei.
+
+![alt text](../Evidencias/criacao_crawler.png)
+
+![alt text](../Evidencias/crawler_sucesso.png)
+
+### Tabela
+
+Foram criadas as tabelas: dim_filmes, dim_tempo, dim_genero, fato_filmes. 
+
+![alt text](../Evidencias/tabs_dimensional.png)
+
+### AWS Athena
+
+![alt text](../Evidencias/athena.png)
+
+![alt text](../Evidencias/resultado_athena.png)
