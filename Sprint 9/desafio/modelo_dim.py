@@ -41,8 +41,7 @@ final_df = joined_df.withColumn(
 filtered_df = final_df.filter(
     (F.lower(F.col('csv_genero')).contains('comedy')) & 
     (F.lower(F.col('csv_genero')).contains('romance')) &
-    (F.col('anoLancamento').cast('int').between(1984, 2022))  # Filtrando os anos entre 1984 e 2022
-)
+    (F.col('anoLancamento').cast('int').between(1984, 2022))  
 
 # Criando uma janela para particionar por década e ordenar por nota média e popularidade
 window_spec = Window.partitionBy("decada").orderBy(
@@ -77,7 +76,7 @@ def garantir_comedia_romance(generos):
 # Registrar a função como UDF
 garantir_comedia_romance_udf = F.udf(garantir_comedia_romance, StringType())  
 
-# Aplicando a UDF para garantir que 'comedy' e 'romance' estão sempre presentes
+# Aplicando a UDF para garantir que comédia e romance estão sempre presentes
 dim_genero = top_filmes.withColumn(
     'csv_genero', 
     garantir_comedia_romance_udf(F.col('csv_genero'))
