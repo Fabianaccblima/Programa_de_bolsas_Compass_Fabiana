@@ -41,7 +41,7 @@ Aqui estão algumas das tecnologias que estou estudando e me aprofundando:
 ## 🧠 Interessada em aprender mais sobre:
 
 - **Segurança da Informação** e **Cibersegurança**
-- **Engenharia de Dados**, **Big Data** e **Data Lakes**
+- **Engenharia de Dados**, **Análise de Dados**, **Big Data** e **Data Lakes**
 - **Automação** e **DevOps**
 - **SQL** e **Análise de Dados**
 
