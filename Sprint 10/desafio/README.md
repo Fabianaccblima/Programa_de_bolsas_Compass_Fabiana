@@ -46,7 +46,7 @@ Objetivo: Demonstrar a relação entre orçamento e receita de filmes de comédi
 
 ### Grupo/cor: Faixa Média 
 
-Objetivo: Analisar a evolução da popularidade e recepção dos filmes de comédia romântica ao longo das décadas, destacando as mudanças nas avaliações e no interesse do público.
+Objetivo: Analisar a distribuição dos votos médios atribuídos aos filmes de comédia romântica ao longo das décadas, segmentando-os por faixas de avaliação.
 
 ![alt text](../evidencias/grafico_3.png)
 
