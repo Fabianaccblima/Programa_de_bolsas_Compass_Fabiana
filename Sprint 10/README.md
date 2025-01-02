@@ -4,4 +4,4 @@ O objetivo desse desafio foi criar gráficos no AWS QuickSight para analisar e v
 
 ## MUDANÇA DA ANÁLISE
 
-Na sprint 9 precisei modificar a minha análise, a minha nova análise foi consistiu em avaliar a evolução dos filmes de comédias românticas entre as décadas de 1980 a 2022, com foco nos três filmes mais bem avaliados de cada década. A análise investigou como receita, lucro, orçamento, popularidade, notas médias, votos e qualidade do filme se comportaram ao longo do tempo e se correlacionaram, revelando tendências e transformações no gênero.
+Na sprint 9 precisei modificar a minha análise, a minha nova análise consistiu em avaliar a evolução dos filmes de comédias românticas entre as décadas de 1980 a 2022, com foco nos três filmes mais bem avaliados de cada década. A análise investigou como receita, lucro, orçamento, popularidade, notas médias, votos e qualidade do filme se comportaram ao longo do tempo e se correlacionaram, revelando tendências e transformações no gênero.
