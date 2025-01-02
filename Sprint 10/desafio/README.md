@@ -1,3 +1,7 @@
+## Análise
+
+Avaliar a evolução dos filmes de comédias românticas entre das décadas de 1980 a 2022, com foco nos três filmes mais bem avaliados de cada década. A análise investigou como receita, lucro, orçamento, popularidade, notas médias, votos e qualidade do filme se comportaram ao longo do tempo e se correlacionaram, revelando tendências e transformações no gênero.
+
 ## QUICKSIGHT
 
 1 - Criei a minha conta no QuickSight
