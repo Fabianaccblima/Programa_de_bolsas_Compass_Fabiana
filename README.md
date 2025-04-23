@@ -37,13 +37,14 @@ Atualmente, busco uma oportunidade de **estágio em Dados**, onde eu possa aplic
 
 ---
 
-## 📌 Projetos em andamento
+📌 Estudos em andamento
+📈 Estudo e prática de automatização com Python
 
-- 📈 Automatização de tarefas e relatórios com **Python**
-- 🧮 Análise de dados com **SQL**, **Pandas** e visualizações
-- ☁️ Estudos de arquitetura de dados em **nuvem**
+🧮 Aprofundamento em SQL para análise e manipulação de dados
 
-Explore meus projetos: 👉 [GitHub](https://github.com/fabianagomes)
+☁️ Experiência com arquitetura de dados em nuvem (AWS)
+
+📊 Prática com visualização de dados utilizando bibliotecas como Matplotlib e Seaborn
 
 ---
 
